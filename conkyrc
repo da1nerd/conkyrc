@@ -92,6 +92,11 @@ ${goto 40}RAM:${alignr 39}${memperc}%
 ${goto 40}${diskiograph 26,190 FFFFFF FFFFFF -l}
 ${goto 40}HDD I/O:${alignr 39}${diskio}
 
+${goto 40}Core 1 Temp: ${exec sensors | grep 'Core 0' | cut -c17-24}
+${goto 40}Core 2 Temp: ${exec sensors | grep 'Core 1' | cut -c17-24}
+${goto 40}Core 3 Temp: ${exec sensors | grep 'Core 2' | cut -c17-24}
+${goto 40}Core 4 Temp: ${exec sensors | grep 'Core 3' | cut -c17-24}
+
 ${hr 2}
 \
 # Network
